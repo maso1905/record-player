@@ -1,7 +1,7 @@
 {
   "name": "record-player",
   "version": "1.0.0",
-  "description": "",
+  "description": "My first Gulp project",
   "main": "gulpfile.js",
   "dependencies": {
     "css": "^3.0.0",
