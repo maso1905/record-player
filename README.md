@@ -1,1 +1,1 @@
-# Read me info coming soon
+# Info coming soon

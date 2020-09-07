@@ -1,0 +1,33 @@
+
+/* Responsive small screens */
+@media only screen and (max-width: 700px) and (min-width: 320px){
+
+    #vinyl {
+        grid-area: 2/1/3/4;
+    }
+    img{
+        max-width: 200px;
+    }
+    
+    #first-text,
+    #second-text,
+    #third-text,
+    .tunes-bottom {
+        font-size: 7vw;
+        text-align: center;
+    }
+
+    #first-text {
+        grid-area: 1/1/2/4;
+    }
+
+    #second-text {
+        grid-area: 3/1/4/4;
+    }
+
+    #third-text {
+        grid-area: 1/1/2/4;
+    }
+
+   
+}
