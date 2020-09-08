@@ -2,7 +2,6 @@
 
 The reason you want to autmate your project is that is makes everything easier for developers, especially for big projects with multiple developers involved. It also subtract many extra steps for publishing to the internet.
 
----
 
 # Packages, tools, plugins and why
 
@@ -12,20 +11,19 @@ The reason you want to autmate your project is that is makes everything easier f
   > npm is short for Node Package Manager which can be used to install packages, version management and dependency management. Like a library for your project.
 
   
-## + gulp
++ ## gulp
   > gulp is a tool used for a lot of things. Some of them are creating a web server, reloading browser automatically and optimizing assets like CSS, JavaScript and images.
-## + gulp-imagemin
++ ## gulp-imagemin
   > gulp imagemin is used minify images and optimize them for websites.
-## + gulp-concat
++ ## gulp-concat
   > gulp concat is used to combine multiple files into one single file, concat is short for concatenate.
-## + gulp-uglify-es
++ ## gulp-uglify-es
   > gulp uglify is used to compress the code and remove unnecessary space or syntax to optimize runtime.
 
 
-## + browser-sync
++ ## browser-sync
   > browser sync is a npm tool which can be used to create a small server. This is very useful because it allows you to obeserve your project with live reloading in the browser. 
 
----
 
 # How to use
 
