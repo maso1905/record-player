@@ -29,7 +29,7 @@ The reason you want to autmate your project is that is makes everything easier f
 
 This repo contains an automated system which copies the local "working files" from the 'src' directory to the public directory 'pub'. It also concatenates the files and updates and compresses the files live, which can be observed with the live server tool 'browser sync'. Right now, the avilable functions for automation are CSS- and JS-files and images.
 
-## 1. To start this system you need to have Node.Js installed on your computer.Then you need to install npm:
+## 1. To start this system you need to have Node.Js installed on your computer:
 
 > [Download Node here](https://nodejs.org/en/)
 
@@ -39,17 +39,15 @@ This repo contains an automated system which copies the local "working files" fr
 Or check if you already have it installed with the command: 
 > git --version
 
-## 3. Then, in your new set-up working directory - clone this repo:
+## 3. Then you clone this repo:
 
 > git clone https://github.com/maso1905/record-player 
 
-## 4. Then you run:
+## 4. Then, in the cloned directory, you need to install npm:
 
-> npm init
+> npm install
 
-## 5. Then you install the gulp packages and browser sync tool mentioned earlier as dev dependencies.
-
-## 6. Then finally you run the system with simply:
+## 5. Then finally you run the system with simply:
 
 > gulp
 
