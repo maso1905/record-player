@@ -6,9 +6,9 @@ The reason you want to autmate your project is that is makes everything easier f
 
 # Packages, tools, plugins and why
 
-## + node.js
++ ## node.js
   > node.js is an JavaScript runtime environment. This is needed to run Gulp.
-## + npm
++ ## npm
   > npm is short for Node Package Manager which can be used to install packages, version management and dependency management. Like a library for your project.
 
   
