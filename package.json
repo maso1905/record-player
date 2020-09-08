@@ -5,13 +5,12 @@
   "main": "gulpfile.js",
   "dependencies": {
     "css": "^3.0.0",
-    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
-    "gulp-connect": "^5.7.0",
-    "gulp-livereload": "^4.0.2",
     "gulp-uglify-es": "^2.0.0"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0"
   },
   "scripts": {
@@ -21,7 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/maso1905/record-player.git"
   },
-  "author": "",
+  "author": "Malin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/maso1905/record-player/issues"
