@@ -1,7 +1,9 @@
 const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 const { src, series, parallel, dest, watch } = require('gulp');
-
+const sass = require('gulp-sass'); 
+sass.compiler = require('node-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 
 
@@ -10,7 +12,8 @@ const files = {
   htmlPath: "src/**/*.html", 
   cssPath: "src/**/*.css", 
   jsPath: "src/**/*.js",
-  imgPath: "src/images/*"
+  imgPath: "src/images/*",
+  scssPath: "src/sass/*.scss"
 };
 
 
@@ -28,7 +31,17 @@ function copyCss(){
     .pipe(concat('main.css'))
     .pipe(dest('pub/css'))
     .pipe(browserSync.stream());
+} 
+
+// Copy & concatenate all files with .scss from 'src/scss' directory to the 'pub' directory
+function copyScss(){
+  return src(files.scssPath)
+      .pipe(sourcemaps.init())
+      .pipe(sass().on("error", sass.logError))
+      .pipe(sourcemaps.write('.'))
+      .pipe(dest('pub/css'));
 }
+
 
 // Copy & concatenate all files with .js from 'src/js' directory to the 'pub' directory
 function copyJs(){
@@ -48,23 +61,24 @@ function copyImages(){
 
 // Watching for changes in all html, css, js & img files.
 function watchTask() {
-  watch([files.htmlPath, files.cssPath, files.jsPath, files.imgPath], 
-    parallel(copyHtml, copyCss, copyJs, copyImages));
+  watch([files.htmlPath, files.scssPath, files.cssPath, files.jsPath, files.imgPath], 
+    parallel(copyHtml, copyScss, copyCss, copyJs, copyImages));
 }
 
 
-// Exports to the public directory 'pub'
-exports.default = series(
-  parallel(copyHtml, copyCss, copyJs, copyImages),
-  watchTask
-);
-
-
 /**
- * This example will serve files from the './app' directory
+ * This example will serve files from the 'src' directory
  * and will automatically watch for html/css/js/img changes
  */
+
 browserSync.init({
   watch: true,
   server: "src"
 });
+
+
+// Exports to the public directory 'pub'
+exports.default = series(
+  parallel(copyHtml, copyScss, copyCss, copyJs, copyImages),
+  watchTask
+);
